@@ -5,16 +5,19 @@ import (
 )
 
 func main() {
-	votos := make(map[string]int)
-
-	votos["Ana"] += 1
-	votos["Carlos"] += 1
-	votos["Bruno"] += 1
-	votos["Ana"] += 1
-	votos["Carlos"] += 1
-	votos["Ana"] += 1
-
-	for candidato, total := range votos {
-		fmt.Printf("%s recebeu %d votos", candidato, total)
-	}
+		estoque := map[string]int{
+			"COXINHA":       10,
+			"PÃO DE QUEIJO": 15,
+			"REFRIGERANTE":  20,
+		}
+	
+	
+		estoque["COXINHA"] -= 2
+		estoque["PÃO DE QUEIJO"] -= 1
+	
+	
+		fmt.Println("Estoque atual:")
+		for produto, quantidade := range estoque {
+			fmt.Printf("%s: %d unidades\n", produto, quantidade)
+		}
 	}
