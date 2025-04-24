@@ -1,32 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
-
-func dadosPessoa(nome string, idade int) (int, string) {
-	if idade >= 18 {
-		return idade, "maior de idade"
-	} else {
-		return idade, "menor de idade"
-	}
+func pegarNome() (string, string){
+	return "Azul", "SuperChoque"
 }
 
 func main() {
-	nome := "Igor"
-	idade := 16
-
-	id, status := dadosPessoa(nome, idade)
-
-	fmt.Printf("%s tem %d anos e é %s.\n", nome, id, status)
+	nome, sobrenome := pegarNome()
+	fmt.Println(nome);
+	fmt.Println(sobrenome)
 }
-
-
-
-	
-
-
-	
-	
-
